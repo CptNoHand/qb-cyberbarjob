@@ -70,7 +70,7 @@ label = "Shop",
             slot = 4,
         },
         [5] = {
-            name = "crips",
+            name = "crisps",
             price = 5,
             amount = 50,
             info = {},
