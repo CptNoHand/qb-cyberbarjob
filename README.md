@@ -43,8 +43,15 @@ qb-core/shared.lua
     ["hulkcocktail"]                 = {["name"] = "hulkcocktail",                  ["label"] = "Hulk Cocktail",            ["weight"] = 250,       ["type"] = "item",      ["image"] = "hulkcocktail.png",         ["unique"] = false,     ["useable"] = true,     ["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Cyber Bar Is The Best."}, 
     ["marvelcocktail"]               = {["name"] = "marvelcocktail",                ["label"] = "Marvel Cocktail",          ["weight"] = 250,       ["type"] = "item",      ["image"] = "marvelcocktail.png",       ["unique"] = false,     ["useable"] = true,     ["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Cyber Bar Is The Best."}, 
     ["yoshishooter"]                 = {["name"] = "yoshishooter",                  ["label"] = "Yoshi Shooter",            ["weight"] = 250,       ["type"] = "item",      ["image"] = "yoshishooter.png",         ["unique"] = false,     ["useable"] = true,     ["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Cyber Bar Is The Best."},
+    
     -- Cyberbar Food
     ["crisps"]                       = {["name"] = "crisps",                        ["label"] = "Chips",                    ["weight"] = 250,       ["type"] = "item",      ["image"] = "crisps.png",               ["unique"] = false,     ["useable"] = true,     ["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Hmmm nice."}, 
+
+    -- Cyberbar Ingrediants
+    ["cocktailglass"]                       = {["name"] = "cocktailglass",                        ["label"] = "Chips",                    ["weight"] = 250,       ["type"] = "item",      ["image"] = "cocktailglass.png",               ["unique"] = false,     ["useable"] = true,     ["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Hmmm nice."},
+    ["pintglass"]                       = {["name"] = "pintglass",                        ["label"] = "Chips",                    ["weight"] = 250,       ["type"] = "item",      ["image"] = "pintglass.png",               ["unique"] = false,     ["useable"] = true,     ["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Hmmm nice."},
+    ["smallglass"]                       = {["name"] = "smallglass",                        ["label"] = "Chips",                    ["weight"] = 250,       ["type"] = "item",      ["image"] = "smallglass.png",               ["unique"] = false,     ["useable"] = true,     ["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Hmmm nice."},
+    ["wineglass"]                       = {["name"] = "wineglass",                        ["label"] = "Chips",                    ["weight"] = 250,       ["type"] = "item",      ["image"] = "wineglass.png",               ["unique"] = false,     ["useable"] = true,     ["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Hmmm nice."},
 ```
 ```
 ["tequilala"] = {
@@ -96,7 +103,7 @@ qb-smallresources/config.lua  -- Regen Amounts for hunger and thirst
     ["crisps"] = math.random(10, 20),
 ```
 
-qb-smallresources/client/consumables.lua  
+qb-smallresources/client/consumables.lua  - Shouldn't need if added with another resource  
 ```
 -- Cyberbar
 -- Drinking a Cocktail
