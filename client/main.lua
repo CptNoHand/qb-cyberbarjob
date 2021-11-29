@@ -196,7 +196,17 @@ function MakePatocheBeer()
         disableCarMovement = false,
         disableMouse = false,
         disableCombat = false,
-    })
+    },{
+        animDict = "amb@world_human_drinking_fat@coffee@female@base",
+        anim = "base",
+        flags = 8,
+    }, {
+        model = "prop_pint_glass_tall",
+        bone = 28422,
+        coords = vector3(-0.005, 0.00, 0.00),
+        rotation = vector3(175.0, 160.0, 0.0),
+    } 
+)
     Citizen.Wait(4000)
     TriggerServerEvent('QBCore:Server:AddItem', "patochebeer", 1)
     --TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["patochebeer"], "add")
@@ -211,7 +221,17 @@ function MakeDuffBeer()
         disableCarMovement = false,
         disableMouse = false,
         disableCombat = false,
-    })
+    },{
+        animDict = "amb@world_human_drinking_fat@coffee@female@base",
+        anim = "base",
+        flags = 8,
+    }, {
+        model = "prop_pint_glass_tall",
+        bone = 28422,
+        coords = vector3(-0.005, 0.00, 0.00),
+        rotation = vector3(175.0, 160.0, 0.0),
+    } 
+)
     Citizen.Wait(4000)
     TriggerServerEvent('QBCore:Server:AddItem', "duffbeer", 1)
     --TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["duffbeer"], "add")
@@ -225,7 +245,22 @@ function Makehulkcocktail()
         disableCarMovement = false,
         disableMouse = false,
         disableCombat = false,
-    })
+    },{
+        animDict = "anim@amb@clubhouse@bar@drink@one",
+        anim = "one_bartender",
+        flags = 8,
+    }, {
+        model = "prop_shot_glass",
+        bone = 60309,
+        coords = vector3(-0.005, 0.00, 0.00),
+        rotation = vector3(175.0, 160.0, 0.0),
+    }, {
+        model = "prop_cs_whiskey_bottle",
+        bone = 28422,
+        coords = vector3(-0.005, 0.00, 0.00),
+        rotation = vector3(175.0, 160.0, 0.0),
+    } 
+)
     Citizen.Wait(4000)
     TriggerServerEvent('QBCore:Server:AddItem', "hulkcocktail", 1)
     --TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["hulkcocktail"], "add")
@@ -239,7 +274,22 @@ function Makemilkdragon()
         disableCarMovement = false,
         disableMouse = false,
         disableCombat = false,
-    })
+    },{
+        animDict = "anim@amb@clubhouse@bar@drink@one",
+        anim = "one_bartender",
+        flags = 8,
+    }, {
+        model = "prop_shot_glass",
+        bone = 60309,
+        coords = vector3(-0.005, 0.00, 0.00),
+        rotation = vector3(175.0, 160.0, 0.0),
+    }, {
+        model = "prop_cs_whiskey_bottle",
+        bone = 28422,
+        coords = vector3(-0.005, 0.00, 0.00),
+        rotation = vector3(175.0, 160.0, 0.0),
+    } 
+)
     Citizen.Wait(4000)
     TriggerServerEvent('QBCore:Server:AddItem', "milkdragon", 1)
     --TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["milkdragon"], "add")
@@ -253,7 +303,22 @@ function Makemarvelcocktail()
         disableCarMovement = false,
         disableMouse = false,
         disableCombat = false,
-    })
+    },{
+        animDict = "anim@amb@clubhouse@bar@drink@one",
+        anim = "one_bartender",
+        flags = 8,
+    }, {
+        model = "prop_shot_glass",
+        bone = 60309,
+        coords = vector3(-0.005, 0.00, 0.00),
+        rotation = vector3(175.0, 160.0, 0.0),
+    }, {
+        model = "prop_cs_whiskey_bottle",
+        bone = 28422,
+        coords = vector3(-0.005, 0.00, 0.00),
+        rotation = vector3(175.0, 160.0, 0.0),
+    } 
+)
     Citizen.Wait(4000)
     TriggerServerEvent('QBCore:Server:AddItem', "marvelcocktail", 1)
     --TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["marvelcocktail"], "add")
@@ -267,7 +332,22 @@ function Makeyoshishooter()
         disableCarMovement = false,
         disableMouse = false,
         disableCombat = false,
-    })
+    },{
+        animDict = "anim@amb@clubhouse@bar@drink@one",
+        anim = "one_bartender",
+        flags = 8,
+    }, {
+        model = "prop_shot_glass",
+        bone = 60309,
+        coords = vector3(-0.005, 0.00, 0.00),
+        rotation = vector3(175.0, 160.0, 0.0),
+    }, {
+        model = "prop_cs_whiskey_bottle",
+        bone = 28422,
+        coords = vector3(-0.005, 0.00, 0.00),
+        rotation = vector3(175.0, 160.0, 0.0),
+    } 
+)
     Citizen.Wait(4000)
     TriggerServerEvent('QBCore:Server:AddItem', "yoshishooter", 1)
     --TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["yoshishooter"], "add")
