@@ -6,6 +6,8 @@ Enables Patoche's Cyberbar to have employee's.
 
 [nh-context](https://github.com/nerohiro/nh-context)
 
+[nh-keyboard](https://github.com/nerohiro/nh-keyboard)
+
 ## Optional ##
 [qb-target](https://github.com/BerkieBb/qb-target)
 
