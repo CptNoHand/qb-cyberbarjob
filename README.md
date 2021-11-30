@@ -88,7 +88,7 @@ qb-core/shared.lua
 qb-bossmenu/config.lua
 
 ```
-['tequilala'] = vector3(-568.577, 291.09, 79.18)
+['Cyberbar'] = vector3(0, 0, 0) -- will configure soon
 ```
 
 qb-smallresources/config.lua  -- Regen Amounts for hunger and thirst
