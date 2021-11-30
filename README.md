@@ -48,14 +48,15 @@ qb-core/shared.lua
     ["crisps"]                       = {["name"] = "crisps",                        ["label"] = "Chips",                    ["weight"] = 250,       ["type"] = "item",      ["image"] = "crisps.png",               ["unique"] = false,     ["useable"] = true,     ["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Hmmm nice."}, 
 
     -- Cyberbar Ingrediants
-    ["cocktailglass"]                       = {["name"] = "cocktailglass",                        ["label"] = "Chips",                    ["weight"] = 250,       ["type"] = "item",      ["image"] = "cocktailglass.png",               ["unique"] = false,     ["useable"] = true,     ["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Hmmm nice."},
-    ["pintglass"]                       = {["name"] = "pintglass",                        ["label"] = "Chips",                    ["weight"] = 250,       ["type"] = "item",      ["image"] = "pintglass.png",               ["unique"] = false,     ["useable"] = true,     ["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Hmmm nice."},
-    ["smallglass"]                       = {["name"] = "smallglass",                        ["label"] = "Chips",                    ["weight"] = 250,       ["type"] = "item",      ["image"] = "smallglass.png",               ["unique"] = false,     ["useable"] = true,     ["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Hmmm nice."},
-    ["wineglass"]                       = {["name"] = "wineglass",                        ["label"] = "Chips",                    ["weight"] = 250,       ["type"] = "item",      ["image"] = "wineglass.png",               ["unique"] = false,     ["useable"] = true,     ["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Hmmm nice."},
+    ["pintglass"]                    = {["name"] = "pintglass",                     ["label"] = "Pint Glass",               ["weight"] = 500,       ["type"] = "item",      ["image"] = "pintglass.png",            ["unique"] = false,     ["useable"] = true,     ["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "A glass for beer"},
+    ["smallglass"]                   = {["name"] = "smallglass",                    ["label"] = "Small Glass",              ["weight"] = 500,       ["type"] = "item",      ["image"] = "smallglass.png",           ["unique"] = false,     ["useable"] = true,     ["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "A small glass"},
+    ["wineglass"]                    = {["name"] = "wineglass",                     ["label"] = "Wine Glass",               ["weight"] = 500,       ["type"] = "item",      ["image"] = "wineglass.png",            ["unique"] = false,     ["useable"] = true,     ["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "A glass for wine"},
+    ["cocktailglass"]                = {["name"] = "cocktailglass",                 ["label"] = "Cocktail Glass",           ["weight"] = 500,       ["type"] = "item",      ["image"] = "cocktailglass.png",        ["unique"] = false,     ["useable"] = true,     ["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "A glass for cock... tails"},
+
 ```
 ```
-["tequilala"] = {
-        label = "Tequi-la-la",
+["cyberbar"] = {
+        label = "Cyberbar",
         defaultDuty = true,
         grades = {
             ['0'] = {
@@ -223,6 +224,8 @@ QBCore.Functions.CreateUseableItem("duffbeer", function(source, item)
         TriggerClientEvent("consumables:client:DrinkBeer", source, item.name)
     end
 end)
+
+
 
 -- Cyberbar Food
 QBCore.Functions.CreateUseableItem("crisps", function(source, item)
