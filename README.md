@@ -4,7 +4,9 @@ Enables Patoche's Cyberbar to have employee's.
 ## Dependencies  ##
 [QBCore](https://github.com/qbcore-framework/qb-core)
 
-[nh-context](https://github.com/nerohiro/nh-context)
+[qb-menu](https://github.com/qbcore-framework/qb-menu)
+
+[qb-input](https://github.com/qbcore-framework/qb-input)
 
 ## Optional ##
 [qb-target](https://github.com/BerkieBb/qb-target)
@@ -20,9 +22,9 @@ If not using qb-target
 ## Credit ##
 Credit all goes to these people as if it wasn't for them I wouldn't have been able to get this script to work.
 
-Original Creator [DrBlackBeard095](https://github.com/DrBlackBeard095) of [qb-burgershot](https://github.com/DrBlackBeard095/Qb-Burgershot)
+Original Creator [Zach488](https://github.com/Zach488) of [qb-burgershot](https://github.com/Zach488/qb-burgershot)
 
-Forked from [heyjeay](https://github.com/heyjeay) [qb-tequilala](https://github.com/heyjeay/qb-tequilala)
+Forked from [heyjeay](https://github.com/heyjeay) of [qb-tequilala](https://github.com/heyjeay/qb-tequilala)
 
 ## Key Features ##
  - For qb-target or non qb-target servers
@@ -88,7 +90,7 @@ qb-core/shared.lua
 qb-bossmenu/config.lua
 
 ```
-['tequilala'] = vector3(-568.577, 291.09, 79.18)
+['Cyberbar'] = vector3(0, 0, 0) -- will configure soon
 ```
 
 qb-smallresources/config.lua  -- Regen Amounts for hunger and thirst

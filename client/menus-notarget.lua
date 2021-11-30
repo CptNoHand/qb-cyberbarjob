@@ -35,7 +35,7 @@ Citizen.CreateThread(function()
                             end
                             if IsControlJustReleased(0, 38) then
                                 onDuty = not onDuty
-                                TriggerServerEvent("QBCore:ToggleDuty")
+                                TriggerServerEvent("qb-menu:CyberbarDutyMenu")
                             end
                         elseif #(pos - vector3(v.x, v.y, v.z)) < 2.5 then
                             sleep = 5
@@ -51,7 +51,7 @@ Citizen.CreateThread(function()
                                 sleep = 5
                                 DrawText3D(v.x, v.y, v.z, "~g~E~w~ -  Pour Beer")
                                 if IsControlJustReleased(0, 38) then
-                                    TriggerEvent("nh-context:BeerMenu")
+                                    TriggerEvent("qb-menu:BeerMenu")
                                 end
                             elseif #(pos - vector3(v.x, v.y, v.z)) < 2.5 then
                                 sleep = 5
@@ -68,7 +68,7 @@ Citizen.CreateThread(function()
                                 sleep = 5
                                 DrawText3D(v.x, v.y, v.z, "~g~E~w~ -  Mix Drinks")
                                 if IsControlJustReleased(0, 38) then
-                                    TriggerEvent("nh-context:MixerMenu")
+                                    TriggerEvent("qb-menu:MixerMenu")
                                 end
                             elseif #(pos - vector3(v.x, v.y, v.z)) < 2.5 then
                                 sleep = 5
@@ -85,7 +85,7 @@ Citizen.CreateThread(function()
                                 sleep = 5
                                 DrawText3D(v.x, v.y, v.z, "~g~E~w~ -  Open Fridge")
                                 if IsControlJustReleased(0, 38) then
-                                    TriggerEvent("nh-context:cyberbarMenu")
+                                    TriggerEvent("qb-menu:cyberbarMenu")
                                 end
                             elseif #(pos - vector3(v.x, v.y, v.z)) < 2.5 then
                                 sleep = 5
@@ -183,17 +183,15 @@ Citizen.CreateThread(function()
     end
 end)
 
--- NH - Context --
+-- qb-menu --
 
-RegisterNetEvent('nh-context:cyberbarMenu', function(data)
-    TriggerEvent('nh-context:sendMenu', {
+RegisterNetEvent('qb-menu:cyberbarMenu', function(data)
+    exports['qb-menu']:openMenu({
         {
-            id = 0,
             header = "| Fridge |",
-            txt = "",
+            isMenuHeader = true
         },
         {
-            id = 1,
             header = "• Order Items",
             txt = "Buy items from the shop!",
             params = {
@@ -201,7 +199,6 @@ RegisterNetEvent('nh-context:cyberbarMenu', function(data)
             }
         },
         {
-            id = 2,
             header = "• Open Fridge",
             txt = "See what you have in storage",
             params = {
@@ -209,22 +206,22 @@ RegisterNetEvent('nh-context:cyberbarMenu', function(data)
             }
         },
         {
-            id = 3,
-            header = "Close (ESC)",
-            txt = "",
+            header = "• Close Menu",
+            txt = "", 
+            params = { 
+                event = "qb-menu:client:closeMenu"
+            }
         },
     })
 end)
 
-RegisterNetEvent('nh-context:BeerMenu', function(data)
-    TriggerEvent('nh-context:sendMenu', {
+RegisterNetEvent('qb-menu:BeerMenu', function(data)
+    exports['qb-menu']:openMenu({
         {
-            id = 0,
             header = "| Beer Menu |",
-            txt = "",
+            isMenuHeader = true
         },
         {
-            id = 1,
             header = "• Patoche Beer",
             txt = "Pint Glass",
             params = {
@@ -232,7 +229,6 @@ RegisterNetEvent('nh-context:BeerMenu', function(data)
             }
         },
         {
-            id = 2,
             header = "• Duff Beer",
             txt = "Pint Glass",
             params = {
@@ -240,22 +236,22 @@ RegisterNetEvent('nh-context:BeerMenu', function(data)
             }
         },
         {
-            id = 3,
-            header = "Close (ESC)",
-            txt = "",
+            header = "• Close Menu",
+            txt = "", 
+            params = { 
+                event = "qb-menu:client:closeMenu"
+            }
         },
     })
 end)
 
-RegisterNetEvent('nh-context:MixerMenu', function(data)
-    TriggerEvent('nh-context:sendMenu', {
+RegisterNetEvent('qb-menu:MixerMenu', function(data)
+    exports['qb-menu']:openMenu({
         {
-            id = 0,
             header = "| Mixer Menu |",
-            txt = "",
+            isMenuHeader = true
         },
         {
-            id = 1,
             header = "• Hulk Cocktail",
             txt = "Small Glass",
             params = {
@@ -263,7 +259,6 @@ RegisterNetEvent('nh-context:MixerMenu', function(data)
             }
         },
         {
-            id = 2,
             header = "• Milk Dragon",
             txt = "Small Glass",
             params = {
@@ -271,7 +266,6 @@ RegisterNetEvent('nh-context:MixerMenu', function(data)
             }
         },
         {
-            id = 3,
             header = "• Marvel Cocktail",
             txt = "Cocktail Glass",
             params = {
@@ -279,7 +273,6 @@ RegisterNetEvent('nh-context:MixerMenu', function(data)
             }
         },
         {
-            id = 4,
             header = "• Yoshi Shooter",
             txt = "Cocktail Glass",
             params = {
@@ -287,34 +280,65 @@ RegisterNetEvent('nh-context:MixerMenu', function(data)
             }
         },
         {
-            id = 5,
-            header = "Close (ESC)",
-            txt = "",
+            header = "• Close Menu",
+            txt = "", 
+            params = { 
+                event = "qb-menu:client:closeMenu"
+            }
         },
     })
 end)
 
+RegisterNetEvent('qb-menu:CyberbarDutyMenu', function(data)
+    exports['qb-menu']:openMenu({
+        { 
+            header = "| Clocking in/Off work |",
+            isMenuHeader = true
+        },
+        { 
+            header = "• Sign In/Off",
+            txt = "",
+            params = {
+                event = "qb-cyberbarjob:Duty",
+            }
+        },
+        {
+            header = "• Close Menu",
+            txt = "", 
+            params = { 
+                event = "qb-menu:client:closeMenu"
+            }
+        },
+    })
+end)
+
+local function closeMenuFull()
+    exports['qb-menu']:closeMenu()
+end
+
 
 -- Register Stuff --
-RegisterNetEvent("qb-cyberbarjob:bill")
-AddEventHandler("qb-cyberbarjob:bill", function()
-    local bill = exports["nh-keyboard"]:KeyboardInput({
-        header = "Create Receipt",
-        rows = {
+RegisterNetEvent("qb-cyberbarjob:bill", function()
+    local dialog = exports['qb-input']:ShowInput({
+        header = "Till",
+        submitText = "Bill Person",
+        inputs = {
             {
-                id = 0,
-                txt = "PayPal Number"
+                type = 'number',
+                isRequired = true,
+                name = 'id',
+                text = 'paypal id'
             },
             {
-                id = 1,
-                txt = "Amount"
+                type = 'number',
+                isRequired = true,
+                name = 'amount',
+                text = '$ amount!'
             }
         }
     })
-    if bill ~= nil then
-        if bill[1].input == nil or bill[2].input == nil then 
-            return 
-        end
-        TriggerServerEvent("qb-cyberbarjob:bill:player", bill[1].input, bill[2].input)
+    if dialog then
+        if not dialog.id or not dialog.amount then return end
+        TriggerServerEvent("qb-tequilalajob:bill:player", dialog.id, dialog.amount)
     end
 end)
