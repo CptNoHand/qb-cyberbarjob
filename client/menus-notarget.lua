@@ -1,4 +1,8 @@
 local QBCore = exports['qb-core']:GetCoreObject()
+isLoggedIn = true
+PlayerJob = {}
+
+local onDuty = false
 -- Drawtext -
 function DrawText3D(x, y, z, text)
     SetTextScale(0.35, 0.35)
@@ -22,7 +26,7 @@ Citizen.CreateThread(function()
         local sleep = 100
         if isLoggedIn then
             local pos = GetEntityCoords(PlayerPedId())
-            if PlayerData.job.name == "cyberbar" then
+            if PlayerJob.name == "cyberbar" then
                 for k, v in pairs(Config.Locations["duty"]) do
                     if #(pos - vector3(v.x, v.y, v.z)) < 5 then
                         if #(pos - vector3(v.x, v.y, v.z)) < 1.5 then

@@ -1,5 +1,5 @@
 local QBCore = exports['qb-core']:GetCoreObject()
-isLoggedIn = true
+isLoggedIn = false
 PlayerJob = {}
 
 local onDuty = false
